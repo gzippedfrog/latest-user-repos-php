@@ -14,7 +14,7 @@ $githubUsers = [
 ];
 
 $cacheFile = __DIR__ . '/../reposCache.json';
-$cacheDuration = 1 * 30;
+$cacheDuration = 10 * 60;
 
 if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheDuration) {
     $reposCache = json_decode(file_get_contents($cacheFile), true);
